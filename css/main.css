@@ -46,17 +46,32 @@ section {
   z-index: -1;
 }
 
+.change-bg {
+  background-color: #fff !important;
+  position: fixed !important;
+}
+
+.change-link {
+  color: #000 !important;
+}
+
 /* Start Header */
 .header nav {
   padding-block: 1.25rem !important;
-  background-color: #fff;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: all .4s;
+  z-index: 999;
 }
 
 .header .logo {
   font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-weight: 800;
-  color: #000;
+  color: #fff;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -71,6 +86,7 @@ section {
 
 .header .nav-item .nav-link {
   padding: 0px !important;
+  color: #fff;
 }
 
 .header .nav-item .nav-link::before {
@@ -78,10 +94,14 @@ section {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #000;
+  background-color: #fff;
   bottom: 0;
   left: 0;
   transition: width 1s;
+}
+
+.header .nav-item .head-scroll::before {
+  background-color: #000 !important;
 }
 
 .header .nav-item .nav-link.active::before {
@@ -229,6 +249,7 @@ section {
   top: 0;
   background-color: var(--main-color);
   border-radius: .375rem;
+  transition: all 1s;
 }
 
 .about .content .skills .progress span::before {
